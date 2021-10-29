@@ -1,0 +1,20 @@
+<!-- <ul>
+    <li *ngFor="let item of prod_list">
+        {{item}}
+
+    </li>
+</ul> -->
+<div class="row">
+<div  *ngFor="let item of prod_list" class="col-sm-4"  >
+    <img src="{{item.image}}" class="card-img-top " alt="..." height="300px">
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+      <p class="card-text">{{item.price|currency}}</p>
+    </div>
+    
+    <div class="card-body">
+      <a routerLink="details/{{item.id}}" class="card-link">Card link</a>
+     
+    </div>
+  </div>
+</div>
